@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.stats import linregress
 import matplotlib.dates as mdates
-
+import numpy as np
 def draw_plot():
     # Read data from file
     df = pd.read_csv('epa-sea-level.csv')
@@ -28,9 +28,9 @@ def draw_plot():
     plt.plot(xnew, (res.slope)*(df_1)+ res.intercept, 'y', label= 'bestfit line-2')    
     
     # Add labels and title
-    plt.title('Rise in sea level', size = 20)
+    plt.title('Rise in Sea Level', size = 20)
     plt.xlabel('Year', size = 16)
-    plt.ylabel('Sealabel(inches)',size = 16)
+    plt.ylabel('Sea Label (inches)',size = 16)
 
     
     # Save plot and return data for testing (DO NOT MODIFY)
